@@ -5,8 +5,9 @@ import styles from './Header.module.sass';
 import CONSTANTS from '../../constants';
 import { clearUserStore } from '../../store/slices/userSlice';
 import { getUser } from '../../store/slices/userSlice';
+import Logo from '../Logo';
 
-const{TEL_NUMBER}=CONSTANTS.COMPANY_CONTACTS;
+const { TEL_NUMBER } = CONSTANTS.COMPANY_CONTACTS;
 
 class Header extends React.Component {
   componentDidMount() {
@@ -71,7 +72,9 @@ class Header extends React.Component {
                 </Link>
               </li>
               <li>
-                <span onClick={this.logOut}>Logout</span>
+                <span className={styles.logOut} onClick={this.logOut}>
+                  Logout
+                </span>
               </li>
             </ul>
           </div>
@@ -110,7 +113,7 @@ class Header extends React.Component {
         </div>
         <div className={styles.loginSignnUpHeaders}>
           <div className={styles.numberContainer}>
-            <a href ={`tel:${TEL_NUMBER}`}>
+            <a href={`tel:${TEL_NUMBER}`}>
               <img
                 src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`}
                 alt="phone"
@@ -123,8 +126,8 @@ class Header extends React.Component {
           </div>
         </div>
         <div className={styles.navContainer}>
-          <Logo alt='blue_logo'/>
-         
+          <Logo alt="blue_logo" />
+
           <div className={styles.leftNav}>
             <div className={styles.nav}>
               <ul>
