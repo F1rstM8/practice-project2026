@@ -8,9 +8,9 @@ import Footer from '../../components/Footer/Footer';
 import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
-import firstNamingPlatformCards from './firstNamingPlatform.json';
+import FirstNamingPlatformList from './FirstNamingPlatformList';
 
-console.log(`firstNamingPlatformCards :>>`, firstNamingPlatformCards);
+
 const Home = (props) => {
   const [index, setIndex] = useState(0);
   const [styleName, setStyle] = useState(styles.headline__static);
