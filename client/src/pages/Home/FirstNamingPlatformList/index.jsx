@@ -1,8 +1,8 @@
 import React from 'react';
-import firstNamingPlatformCards from './firstNamingPlatform.json';
+import firstNamingPlatformCards from './firstNamingPlatform';
 import styles from './FirstNamingPlatformList.module.sass';
 
-function FirstNamingPlatformList () {
+function FirstNamingPlatformList() {
   return (
     <>
       <div className={styles.namingPlatformListContainer}>
@@ -12,7 +12,11 @@ function FirstNamingPlatformList () {
             <li key={i}>
               <div className={styles.namingPlatformArticle}>
                 <img src={c.iconSrc} alt={c.title} />
-                <h3>{c.title}</h3>
+                <h3>
+                  {c.title.map((t) => (
+                    <div>{t}</div>
+                  ))}
+                </h3>
                 <p>{c.body}</p>
               </div>
             </li>
