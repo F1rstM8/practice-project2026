@@ -5,7 +5,7 @@ import moment from 'moment';
 import styles from './ContestSideBar.module.sass';
 import CONSTANTS from '../../constants';
 
-const ContestSideBar = props => {
+const ContestSideBar = (props) => {
   const getTimeStr = () => {
     const diff = moment.duration(
       moment().diff(moment(props.contestData.createdAt))
@@ -27,7 +27,7 @@ const ContestSideBar = props => {
             <div className={styles.prizeContainer}>
               <img
                 src={`${CONSTANTS.STATIC_IMAGES_PATH}big-diamond.png`}
-                alt='diamond'
+                alt="diamond"
               />
               <span>{`$ ${prize}`}</span>
             </div>
@@ -35,7 +35,7 @@ const ContestSideBar = props => {
               <div className={styles.timeDesc}>
                 <img
                   src={`${CONSTANTS.STATIC_IMAGES_PATH}clock.png`}
-                  alt='clock'
+                  alt="clock"
                 />
                 <span>Going</span>
               </div>
@@ -45,7 +45,7 @@ const ContestSideBar = props => {
               <div>
                 <img
                   src={`${CONSTANTS.STATIC_IMAGES_PATH}smallCheck.png`}
-                  alt='check'
+                  alt="check"
                 />
               </div>
               <span>Guaranteed prize</span>
@@ -71,13 +71,19 @@ const ContestSideBar = props => {
                     ? CONSTANTS.ANONYM_IMAGE_PATH
                     : `${CONSTANTS.publicURL}${User.avatar}`
                 }
-                alt='user'
+                alt="user"
               />
               <div className={styles.customerNameContainer}>
                 <span>{`${User.firstName} ${User.lastName}`}</span>
                 <span>{User.displayName}</span>
                 {props.data.role === CONSTANTS.CREATOR && (
-                  <span style={{ marginTop: '5px', color: '#333', fontSize: '14px' }}>
+                  <span
+                    style={{
+                      marginTop: '5px',
+                      color: '#333',
+                      fontSize: '14px',
+                    }}
+                  >
                     {User.email}
                   </span>
                 )}
@@ -92,6 +98,6 @@ const ContestSideBar = props => {
   return renderContestInfo();
 };
 
-const mapStateToProps = state => state.userStore;
+const mapStateToProps = (state) => state.userStore;
 
 export default connect(mapStateToProps, null)(ContestSideBar);
