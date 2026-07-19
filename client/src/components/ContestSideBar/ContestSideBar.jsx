@@ -76,6 +76,11 @@ const ContestSideBar = props => {
               <div className={styles.customerNameContainer}>
                 <span>{`${User.firstName} ${User.lastName}`}</span>
                 <span>{User.displayName}</span>
+                {props.data.role === CONSTANTS.CREATOR && (
+                  <span style={{ marginTop: '5px', color: '#333', fontSize: '14px' }}>
+                    {User.email}
+                  </span>
+                )}
               </div>
             </div>
           </div>
