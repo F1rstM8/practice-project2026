@@ -9,6 +9,7 @@ import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
 import FirstNamingPlatformList from './FirstNamingPlatformList';
+import AgencyFeatures from '../../components/AgencyFeatures/AgencyFeatures';
 
 const Home = (props) => {
   const [index, setIndex] = useState(0);
@@ -65,6 +66,7 @@ const Home = (props) => {
             <div className={styles.firstNamingPlatformContainer}>
               <FirstNamingPlatformList />
             </div>
+            <AgencyFeatures />
             <div className={styles.container__description}>
               <h2 className={styles.blueUnderline}>Why Squadhelp?</h2>
               <div className={styles.cardContainer}>
