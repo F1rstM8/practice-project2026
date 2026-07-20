@@ -39,7 +39,7 @@ class Header extends React.Component {
               }
               alt="user"
             />
-           <span>{`Hi, ${this.props.data.firstName} ${this.props.data.lastName}`}</span>
+            <span>{`Hi, ${this.props.data.firstName} ${this.props.data.lastName}`}</span>
             <img
               src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
               alt="menu"
@@ -131,6 +131,25 @@ class Header extends React.Component {
           <div className={styles.leftNav}>
             <div className={styles.nav}>
               <ul>
+             
+                <li>
+                  <Link
+                    to="/recommended-for-you"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <span
+                      style={{
+                        color: '#f27c54',
+                        fontWeight: '900',
+                        letterSpacing: '1px',
+                      }}
+                    >
+                      RECOMMENDED 1.3
+                    </span>
+                  </Link>
+                </li>
+               
+
                 <li>
                   <span>NAME IDEAS</span>
                   <img
@@ -175,7 +194,7 @@ class Header extends React.Component {
                       <a href="http://www.google.com">HOW IT WORKS</a>
                     </li>
                     <li>
-                      <Link to='/pricing'>PRICING</Link>
+                      <Link to="/pricing">PRICING</Link>
                     </li>
                     <li>
                       <a href="http://www.google.com">AGENCY SERVICE</a>

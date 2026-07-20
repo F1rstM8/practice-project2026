@@ -19,8 +19,10 @@ import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
 import Pricing from './pages/Pricing/Pricing';
+import RecommendedPage from './pages/RecommendedPage/RecommendedPage';
+
 class App extends Component {
-  render () {
+  render() {
     return (
       <Router history={browserHistory}>
         <ToastContainer
@@ -36,7 +38,11 @@ class App extends Component {
         />
         <Switch>
           <Route exact path='/' component={Home} />
-           <Route path='/pricing' component={Pricing} />
+          <Route exact path='/pricing' component={Pricing} />
+          
+        
+          <Route exact path='/recommended-for-you' component={RecommendedPage} />
+          
           <Route
             exact
             path='/login'
