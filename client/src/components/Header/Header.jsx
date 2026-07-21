@@ -131,24 +131,14 @@ class Header extends React.Component {
           <div className={styles.leftNav}>
             <div className={styles.nav}>
               <ul>
-             
                 <li>
                   <Link
                     to="/recommended-for-you"
                     style={{ textDecoration: 'none' }}
                   >
-                    <span
-                      style={{
-                        color: '#f27c54',
-                        fontWeight: '900',
-                        letterSpacing: '1px',
-                      }}
-                    >
-                      RECOMMENDED 1.3
-                    </span>
+                    <span>RECOMMENDED</span>
                   </Link>
                 </li>
-               
 
                 <li>
                   <span>NAME IDEAS</span>
