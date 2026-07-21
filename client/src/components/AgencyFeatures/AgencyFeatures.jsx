@@ -6,7 +6,7 @@ import FeatureCard from './FeatureCard';
 const AgencyFeatures = () => {
   return (
     <section className={styles.container}>
-      {/* Твой заголовок и описание секции остаются здесь */}
+     
       
       <div className={styles.featuresWrapper}>
         {featuresData.map((feature, index) => (
