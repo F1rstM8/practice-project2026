@@ -3,7 +3,6 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import styles from './RecommendedPage.module.sass';
 
-
 const inspiredDomains = [
   { name: 'Egyj.com', price: '$2899', color: '#f8f9fa', text: '#d93025' },
   { name: 'GqiL.com', price: '$2199', color: '#f8f9fa', text: '#1a73e8' },
@@ -17,7 +16,6 @@ const inspiredDomains = [
   { name: 'VBZY.com', price: '$5399', color: '#f8f9fa', text: '#ea4335' },
 ];
 
-
 const similarDomains = [
   { name: 'QYFI.COM', price: '$24183', color: '#f8f9fa', text: '#1a73e8' },
   { name: 'Licu.com', price: '$199995', color: '#f8f9fa', text: '#174ea6' },
@@ -27,11 +25,10 @@ const similarDomains = [
 ];
 
 const RecommendedPage = () => {
-
   const renderCard = (domain, index) => (
     <div key={index} className={styles.card}>
-      <div 
-        className={styles.cardLogo} 
+      <div
+        className={styles.cardLogo}
         style={{ backgroundColor: domain.color, color: domain.text }}
       >
         <span>{domain.name.split('.')[0]}</span>
@@ -47,7 +44,6 @@ const RecommendedPage = () => {
     <>
       <Header />
       <div className={styles.pageWrapper}>
-      
         <div className={styles.heroSection}>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
@@ -55,9 +51,9 @@ const RecommendedPage = () => {
               <p>Personalized picks based on your browsing & favorites</p>
             </div>
             <div className={styles.searchContainer}>
-              <input 
-                type="text" 
-                placeholder="Refine by keyword (e.g., tech, health, food...)" 
+              <input
+                type="text"
+                placeholder="Refine by keyword (e.g., tech, health, food...)"
                 className={styles.searchInput}
               />
               <button className={styles.refineBtn}>Refine</button>
@@ -66,7 +62,6 @@ const RecommendedPage = () => {
         </div>
 
         <div className={styles.mainContainer}>
-        
           <section className={styles.gridSection}>
             <div className={styles.sectionHeader}>
               <h2>💡 Inspired by what you liked</h2>
@@ -77,7 +72,6 @@ const RecommendedPage = () => {
             </div>
           </section>
 
-         
           <section className={styles.gridSection}>
             <div className={styles.sectionHeader}>
               <h2>🔄 Similar in style</h2>
