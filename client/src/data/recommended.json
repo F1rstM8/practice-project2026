@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "logoUrl": "/images/domains/1592005253-750 X 450 (1).webp",
+    "domainName": "Test.com",
+    "price": "$4000000"
+  },
+  {
+    "id": 2,
+    "logoUrl": "/images/domains/1592005253-750 X 450 (2).webp",
+    "domainName": "Document.co",
+    "price": "$345745"
+  },
+  {
+    "id": 3,
+    "logoUrl": "/images/domains/1595709240-UyJq.webp",
+    "domainName": "UyJq.com",
+    "price": "$2879"
+  },
+  {
+    "id": 4,
+    "logoUrl": "/images/domains/1595950484-caqy image1.webp",
+    "domainName": "Caqy.com",
+    "price": "$1999"
+  },
+  {
+    "id": 5,
+    "logoUrl": "/images/domains/1611142534-jvoy.webp",
+    "domainName": "Jvoy.com",
+    "price": "$3799"
+  },
+  {
+    "id": 6,
+    "logoUrl": "/images/domains/1629459543-vbzy.webp",
+    "domainName": "Vbzy.com",
+    "price": "$2199"
+  },
+  {
+    "id": 7,
+    "logoUrl": "/images/domains/1634059808-OIRU-100.webp",
+    "domainName": "OIRU.com",
+    "price": "$85821"
+  },
+  {
+    "id": 8,
+    "logoUrl": "/images/domains/1698218022-BLLT.webp",
+    "domainName": "BLLT.com",
+    "price": "$34095"
+  },
+  {
+    "id": 9,
+    "logoUrl": "/images/domains/logo-image-39513-4q4.webp",
+    "domainName": "4Q4.com",
+    "price": "$86200"
+  },
+  {
+    "id": 10,
+    "logoUrl": "/images/domains/OTKO image1.webp",
+    "domainName": "OTKO.com",
+    "price": "$9149"
+  }
+]
