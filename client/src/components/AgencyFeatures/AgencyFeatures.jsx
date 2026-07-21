@@ -5,13 +5,13 @@ import FeatureCard from './FeatureCard';
 
 const AgencyFeatures = () => {
   return (
+   
     <section className={styles.container}>
-     
       
       <div className={styles.featuresWrapper}>
-        {featuresData.map((feature, index) => (
+        {featuresData.map((feature) => (
           <FeatureCard 
-            key={index} 
+            key={feature.id} 
             icon={feature.icon} 
             title={feature.title} 
             text={feature.text} 

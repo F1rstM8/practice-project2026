@@ -1,20 +1,24 @@
 [
   {
+    "id": 1,
     "icon": "fas fa-handshake",
     "title": "Consultant Led",
     "text": "Work one-on-one with a Atom branding consultant."
   },
   {
+    "id": 2,
     "icon": "fas fa-users",
     "title": "Crowd Powered",
     "text": "Work with our top rated Creatives and receive a huge breadth of ideas."
   },
   {
+    "id": 3,
     "icon": "fas fa-chart-pie",
     "title": "Trademark Reports",
     "text": "Comprehensive trademark screening on your shortlisted names."
   },
   {
+    "id": 4,
     "icon": "fas fa-bullhorn",
     "title": "Audience Testing",
     "text": "Get rapid feedback from real people on your shortlist of business names."
