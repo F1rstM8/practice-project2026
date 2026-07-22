@@ -35,7 +35,8 @@
     {
       "id": 7,
       "title": "I have other questions! How can I get in touch with Squadhelp?",
-      "content": "special-contact-block"
+      "content": "",
+      "type": "contact"
     }
   ]
 }

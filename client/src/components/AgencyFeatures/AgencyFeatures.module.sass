@@ -1,40 +1,43 @@
+@import '../../styles/variables' // <-- ВАЖНО: проверь, правильный ли здесь путь к твоему файлу!
+
 .header
   text-align: center
-  margin-bottom: 40px
+  margin-bottom: $space-xxl
   
   h2
-    font-size: 32px
-    margin-bottom: 15px
-    /* тут добавь нужный цвет из переменных, если надо */
+    font-size: $font-xxxl
+    margin-bottom: $space-md
+    color: $text-dark-blue
   
   p
-    font-size: 16px
-    /* цвет для текста */
+    font-size: $font-lg
+    color: $text-grey
+
 .container
   max-width: 1200px
-  margin: 80px auto
-  padding: 0 20px
+  margin: $space-80 auto
+  padding: 0 $space-lg
   text-align: center
   font-family: sans-serif
 
 .heading
-  color: #19184A
-  font-size: 36px
+  color: $text-dark-blue
+  font-size: $font-36
   font-weight: 700
-  margin-bottom: 20px
+  margin-bottom: $space-lg
 
 .subheading
-  color: #77838f
-  font-size: 16px
+  color: $text-grey
+  font-size: $font-lg
   line-height: 1.6
   max-width: 900px
-  margin: 0 auto 60px
+  margin: 0 auto $space-hero
 
 .featuresWrapper
   display: flex
   justify-content: space-between
-  gap: 30px
-  margin-bottom: 50px
+  gap: $space-30
+  margin-bottom: $space-50
 
   @media (max-width: 992px)
     flex-wrap: wrap
@@ -48,41 +51,42 @@
   align-items: center
 
 .iconBox
+  // Ширину и высоту блоков можно оставлять в пикселях, это нормально
   width: 80px
   height: 80px
-  background: #ffffff
-  border-radius: 20px
+  background: $white
+  border-radius: $radius-lg
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05)
   display: flex
   justify-content: center
   align-items: center
-  margin-bottom: 25px
+  margin-bottom: $space-xl
 
   i
-    font-size: 28px
-    color: #333
+    font-size: $font-xxl
+    color: $text-dark
 
 .featureTitle
-  font-size: 18px
+  font-size: $font-18
   font-weight: 700
-  color: #333
-  margin-bottom: 15px
+  color: $text-dark
+  margin-bottom: $space-md
 
 .featureText
-  font-size: 14px
-  color: #77838f
+  font-size: $font-sm
+  color: $text-grey
   line-height: 1.5
 
 .learnMoreBtn
-  background-color: #f27c54
-  color: white
+  background-color: $orange
+  color: $white
   border: none
-  border-radius: 6px
-  padding: 15px 40px
-  font-size: 16px
+  border-radius: $radius-sm
+  padding: $space-md $space-xxl
+  font-size: $font-lg
   font-weight: bold
   cursor: pointer
   transition: background-color 0.3s
 
   &:hover
-    background-color: #e06a43
+    background-color: $orange-hover

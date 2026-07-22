@@ -12,7 +12,7 @@
     display: flex
     justify-content: space-around
     align-items: center
-    border-bottom: 1px solid #ebebeb
+    border-bottom: 1px solid $grey-border
     @media(max-width: 920px)
       justify-content: center
     @media(max-width: 700px)
@@ -26,17 +26,17 @@
     .startContestBtn
       text-align: center
       max-width: 340px
-      padding: 10px 22px
-      border: 2px solid #28d2d0
-      color: #28d2d0
-      border-radius: 5px
-      font-size: 14px
+      padding: $space-sm 22px
+      border: 2px solid $cyan
+      color: $cyan
+      border-radius: $radius-xs
+      font-size: $font-sm
       font-weight: 400
-      margin-bottom: 10px
+      margin-bottom: $space-sm
 
       &:hover
-        color: white
-        background-color: #28d2d0
+        color: $white
+        background-color: $cyan
 
     .leftNav
       display: flex
@@ -67,10 +67,10 @@
             display: flex
             align-items: center
             justify-content: flex-start
-            margin-right: 30px
+            margin-right: $space-30
             @media(max-width: 700px)
               width: 100%
-              padding: 0 15px
+              padding: 0 $space-md
 
             &:hover
               span
@@ -79,10 +79,10 @@
               ul
                 display: block
                 position: absolute
-                border: 1px solid #eee
+                border: 1px solid $grey-border
                 z-index: 1000
                 top: 130px
-                background-color: white
+                background-color: $white
                 @media(max-width: 700px)
                   top: auto
                   left: 145px
@@ -97,67 +97,65 @@
                 width: 100%
                 padding-top: 8px
                 box-sizing: border-box
-                border-top: 1px solid aquamarine
+                border-top: 1px solid $cyan
 
               li
                 box-sizing: border-box
                 width: 100%
-                padding: 10px 15px
+                padding: $space-sm $space-md
                 display: flex
                 justify-content: flex-start
 
                 &:hover
-                  background: #f9fafb
+                  background: $bg-light-hover
 
                 a
-                  font-size: 12px
+                  font-size: $font-xs
                   text-decoration: none
-                  color: #333
+                  color: $text-dark
 
                   &:hover
-                    color: #f27e51
+                    color: $orange
 
             span
-              color: #495d8b
-              font-size: 15px
+              color: $dark-blue
+              font-size: $font-base
               font-weight: 300
-              padding: 15px 0
-
-             
+              padding: $space-md 0
 
   .loginSignnUpHeaders
-    margin-top: 30px
+    margin-top: $space-30
     display: flex
     flex-direction: row
     align-items: center
     justify-content: space-around
-    border: 1px solid #ebebeb
+    border: 1px solid $grey-border
     margin-bottom: 13px
 
     .userButtonsContainer
-      margin-left: 100px
+      margin-left: $space-100
       align-items: center
       justify-content: center
       display: flex
-      border-left: 1px solid #ebebeb
+      border-left: 1px solid $grey-border
       height: 40px
       @media(max-width: 600px)
         margin-left: 60px
       @media(max-width: 400px)
-        margin-left: 20px
+        margin-left: $space-lg
       @media(max-width: 320px)
         margin-left: 0
 
       .emailIcon
-        padding: 0 15px
-        border-right: 1px solid #ebebeb
+        padding: 0 $space-md
+        border-right: 1px solid $grey-border
 
       .userInfo
         display: flex
         justify-content: center
         align-items: center
-        padding: 0 15px
-        border-right: 1px solid #ebebeb
+        padding: 0 $space-md
+        border-right: 1px solid $grey-border
 
         &:hover
           ul
@@ -166,11 +164,11 @@
             top: 45px
 
         ul
-          border: 1px solid #eee
+          border: 1px solid $grey-border
           z-index: 500
-          padding: 5px 0
+          padding: $space-xs 0
           list-style: none
-          background: white
+          background: $white
           width: 180px
           display: none
 
@@ -178,35 +176,36 @@
             text-align: left
 
             &:hover
-              background: #f9fafb
+              background: $bg-light-hover
 
             span
               display: inline-block
-              padding: 5px 15px
-              color: #333
-              font-size: 16px
+              padding: $space-xs $space-md
+              color: $text-dark
+              font-size: $font-lg
 
               .logOut 
-          cursor: pointer
+                cursor: pointer
+
         img
           width: 20px
           height: 20px
-          border-radius: 10px
+          border-radius: $radius-10
 
         span
           padding: 0
-          margin-left: 5px
-          color: #718888
+          margin-left: $space-xs
+          color: $text-muted
           font-weight: 400
-          font-size: 16px
+          font-size: $font-lg
           border: none
 
       span
-        padding: 0 15px
-        color: #718888
+        padding: 0 $space-md
+        color: $text-muted
         font-weight: 400
-        font-size: 14px
-        border-right: 1px solid #ebebeb
+        font-size: $font-sm
+        border-right: 1px solid $grey-border
 
     .numberContainer
       text-decoration: none
@@ -214,23 +213,23 @@
       display: flex
       justify-content: center
       align-items: center
-      padding: 0 15px
-      border-right: 1px solid #ebebeb
-      border-left: 1px solid #ebebeb
-      margin-left: 120px
+      padding: 0 $space-md
+      border-right: 1px solid $grey-border
+      border-left: 1px solid $grey-border
+      margin-left: $space-120
       height: 40px
       @media(max-width: 600px)
-        margin-left: 10px
+        margin-left: $space-sm
       @media(max-width: 360px)
-        padding: 0 5px
+        padding: 0 $space-xs
         margin-left: 0
 
       span
-        color: #337ab7
-        font-size: 14px
-        margin-left: 10px
+        color: $blue-link
+        font-size: $font-sm
+        margin-left: $space-sm
         @media(max-width: 360px)
-          font-size: 12px
+          font-size: $font-xs
 
   .fixedHeader
     z-index: 500
@@ -239,21 +238,20 @@
     align-items: center
     width: 100%
     position: fixed
-    background-color: rgb(69, 90, 137)
-    border-bottom: 3px solid rgb(255, 255, 255)
+    background-color: $dark-blue
+    border-bottom: 3px solid $white
     height: 30px
 
     .info
-      font-size: 8pt
+      font-size: $font-8pt
       letter-spacing: 0.3px
-      color: white
+      color: $white
       margin-right: 4px
       @media(max-width: 600px)
         display: none
 
     a
-      font-size: 8pt
+      font-size: $font-8pt
       letter-spacing: 0.3px
-      color: lightyellow
+      color: $light-yellow
       text-decoration: underline
-

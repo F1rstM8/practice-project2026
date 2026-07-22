@@ -1,36 +1,37 @@
+@import '../../styles/_variables.sass'
+
 @mixin stepCard
   display: flex
   flex-direction: column
   justify-content: flex-start
   align-items: flex-start
-  margin: 90px 0 30px 0
+  margin: $space-90 0 $space-30 0
   max-width: 540px
   font-family: Raleway, sans-serif
   h3
     text-align: center
-    margin-bottom: 20px
-    font-size: 22px
+    margin-bottom: $space-lg
+    font-size: $font-xl
 
   p
     display: flex
     flex-direction: row
     justify-content: space-around
     align-items: flex-start
-    margin-bottom: 10px
+    margin-bottom: $space-sm
     line-height: 25px
 
     i
       align-self: flex-start
-      color: green
-      margin: 5px 10px 0 0
-
+      color: $green
+      margin: $space-xs $space-sm 0 0
 
   span
-    font-size: 18px
+    font-size: $font-18
 
   @media screen and (max-width: 1024px)
-    margin: 90px 0 30px 0
-    padding: 0 80px
+    margin: $space-90 0 $space-30 0
+    padding: 0 $space-80
 
 
 .container
@@ -39,12 +40,11 @@
   justify-content: flex-start
   align-items: center
 
-
   h2
     text-align: center
     font-family: Raleway, sans-serif
-    margin: 30px 0
-    font-size: 30px
+    margin: $space-30 0
+    font-size: $font-30
     font-weight: 500
 
   &__description
@@ -52,7 +52,6 @@
     flex-direction: column
     justify-content: flex-start
     align-items: center
-
 
     .cardContainer
       display: flex
@@ -65,24 +64,23 @@
         justify-content: flex-start
         align-items: center
 
-
     .card
       display: flex
       flex-direction: column
       justify-content: flex-start
       align-items: flex-start
       max-width: 300px
-      margin: 40px 40px 40px 0
+      margin: $space-xxl $space-xxl $space-xxl 0
       font-family: Raleway, sans-serif
 
       h3
-        margin-top: 20px
-        font-size: 22px
+        margin-top: $space-lg
+        font-size: $font-xl
         font-weight: 500
 
       p
-        margin-top: 10px
-        font-size: 14px
+        margin-top: $space-sm
+        font-size: $font-sm
         line-height: 20px
         font-weight: 400
 
@@ -94,19 +92,18 @@
 
       @media screen and (max-width: 768px)
         max-width: 100%
-        margin: 40px
+        margin: $space-xxl
 
       @media screen and (max-width: 414px)
         p
-          margin-right: 10px
-
+          margin-right: $space-sm
 
   .adv
     display: flex
     flex-direction: row
     justify-content: space-around
     align-items: center
-    margin-bottom: 50px
+    margin-bottom: $space-50
     width: 100%
     max-width: 1100px
 
@@ -132,18 +129,16 @@
         img:last-child
           display: block
 
-
       @media screen and (max-width: 414px)
         img
           max-height: 20px
           max-width: 70px
-          margin: 0 30px
+          margin: 0 $space-30
 
         &:hover
           max-height: 20px
           max-width: 70px
-          margin: 0 30px
-
+          margin: 0 $space-30
 
   .stats
     display: flex
@@ -156,22 +151,21 @@
       flex-direction: row
       justify-content: center
       align-items: center
-      padding: 10px 20px
-      border-right: 1px solid grey
+      padding: $space-sm $space-lg
+      border-right: 1px solid $text-grey
       @media (max-width: 580px)
-        padding: 10px 5px
+        padding: $space-sm $space-xs
 
       p
         font-family: Lato, sans-serif
-        margin-right: 10px
-        font-size: 20px
+        margin-right: $space-sm
+        font-size: $font-20
         font-weight: 600
 
       span
         font-family: Raleway, sans-serif
-        font-size: 18px
+        font-size: $font-18
         font-weight: 400
-
 
     div:last-child
       border-right: 0
@@ -180,16 +174,15 @@
       flex-wrap: wrap
 
     div
-      margin-bottom: 10px
+      margin-bottom: $space-sm
       border-right: 0
-
 
   .step
     display: flex
     flex-direction: row
     justify-content: space-around
     align-items: center
-    padding: 40px 0
+    padding: $space-xxl 0
 
     div
       @include stepCard
@@ -200,19 +193,15 @@
       justify-content: flex-start
       align-items: center
 
-
     img
       width: 100%
-
 
 .whiteStep
   @include stepCard
 
-
 .greenStep
   @include stepCard
-  color: white
-
+  color: $white
 
 @mixin underline
   position: relative
@@ -220,26 +209,23 @@
     position: absolute
     content: ''
     height: 3px
-    bottom: -30px
+    bottom: -$space-30
     margin: 0 auto
     left: 0
     right: 0
     width: 100px
 
-
 .blueUnderline
   @include underline
 
   &:after
-    background: #455A89
-
+    background: $blue-underline
 
 .whiteUnderline
   @include underline
 
   &:after
-    background: white
-
+    background: $white
 
 @mixin innerContainer
   display: flex
@@ -247,15 +233,14 @@
   justify-content: center
   align-items: center
   width: 100%
-  padding: 40px 0 30px 0
-
+  padding: $space-xxl 0 $space-30 0
 
 .stepReverse
   display: flex
   flex-direction: row
   justify-content: space-around
   align-items: flex-start
-  padding: 40px 0
+  padding: $space-xxl 0
 
   div
     @include stepCard
@@ -275,108 +260,103 @@
     flex-direction: column
     justify-content: flex-start
     align-items: flex-start
-    margin: 90px 0 30px 0
-    padding: 0 80px
+    margin: $space-90 0 $space-30 0
+    padding: 0 $space-80
     width: 100%
     @media (max-width: 720px)
       padding: 0
 
-
   @media screen and (max-width: 414px)
     padding: 0
 
-
 .greyContainer
   @include innerContainer
-  background-color: #FAFAFA
+  background-color: $bg-grey
 
 .firstNamingPlatformContainer
   @include innerContainer
 
 .whiteContainer
   @include innerContainer
-  background-color: white
-
+  background-color: $white
 
 .greenContainer
   @include innerContainer
-  background-color: #28D2D0
+  background-color: $cyan
 
 .readyToStartContainer
   width: 100%
-  
+
 .articleToStartWrapper
   box-sizing: border-box
-  margin: 20px auto
-  max-width:  1140px
+  margin: $space-lg auto
+  max-width: 1140px
   width: 100% 
   display: flex
   justify-content: space-between
   align-items: center
-  padding: 30px 
-  background: linear-gradient(45deg,#43b1ff,#412d8f)
-  color: white
-  gap: 10px
+  padding: $space-30 
+  background: linear-gradient(45deg, $gradient-start, $gradient-end)
+  color: $white
+  gap: $space-sm
   @media screen and (max-width: 850px) 
     flex-direction: column
     align-items: start
-   
+    
   i
-    color: black
+    color: $black
     font-weight: 200
-    background-color: white
-    padding: 20px
+    background-color: $white
+    padding: $space-lg
 
 .blueContainer
   @include innerContainer
-  background-color: #2B62EC
-  color: white
+  background-color: $bg-blue
+  color: $white
 
   h2
-    margin-bottom: 40px
-
+    margin-bottom: $space-xxl
 
 .headerBar
   display: flex
   flex-direction: column
   justify-content: flex-start
   align-items: center
-  padding-top: 75px
+  padding-top: $space-75
   max-width: 1140px
 
   h3
-    margin-bottom: 20px
+    margin-bottom: $space-lg
     font-family: Raleway, sans-serif
-    font-size: 30px
+    font-size: $font-30
     font-weight: 500
 
   p
     font-family: Raleway, sans-serif
-    margin-bottom: 30px
-    padding: 0 15px
+    margin-bottom: $space-30
+    padding: 0 $space-md
     text-align: center
-    font-size: 18px
+    font-size: $font-18
     font-weight: 400
     line-height: 25px
 
-
 .headline
-  margin: 20px 0
+  margin: $space-lg 0
   text-align: center
   font-family: Raleway, sans-serif
 
   span:first-child
     line-height: 39px
-    font-size: 36px
+    font-size: $font-36
     font-weight: 500
-    padding: 7px 0
+    padding: $space-7 0
 
   span:last-child
     line-height: 40px
-    font-size: 35px
+    font-size: $font-35
     font-weight: 700
-    padding: 7px 0
-    margin-left: 5px
+    padding: $space-7 0
+    margin-left: $space-xs
 
   transition: width .3s -0.1s
 
@@ -390,9 +370,8 @@
       bottom: 0
       height: 3px
       width: 0
-      background: #28d2d0
+      background: $cyan
       animation: cd-pulse 3s infinite
-
 
 @keyframes cd-pulse
   0%
@@ -400,21 +379,20 @@
   100%
     width: 100%
 
-
 .button
   display: flex
   flex-direction: row
   justify-content: center
   align-items: center
-  color: #28D2D1
-  border: 2px solid #28D2D1
-  border-radius: 5px
+  color: $cyan
+  border: 2px solid $cyan
+  border-radius: $radius-xs
   height: 60px
   cursor: pointer
   background-color: transparent
   min-width: 300px
   width: 300px
-  margin: 40px 0
+  margin: $space-xxl 0
 
   &__link
     display: flex
@@ -423,7 +401,7 @@
     align-items: center
     color: inherit
     font-family: 'Lato', sans-serif
-    font-size: 14px
+    font-size: $font-sm
     font-weight: 500
     height: 100%
     flex: 1
@@ -432,9 +410,6 @@
       color: inherit
       text-decoration: none
 
-
   &:hover
-    color: white
-    background-color: #28D2D1
-
-
+    color: $white
+    background-color: $cyan

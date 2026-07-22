@@ -7,34 +7,34 @@
 
 .heroSection
   background: linear-gradient(135deg, $purple-dark 0%, $purple-light 100%)
-  padding: 60px 20px
+  padding: $space-hero $space-lg 
   display: flex
   justify-content: center
 
 .heroContent
-  max-width: 1200px
+  max-width: 1200px 
   width: 100%
   display: flex
   justify-content: space-between
   align-items: center
   flex-wrap: wrap
-  gap: 20px
+  gap: $space-lg 
 
 .heroText
   color: $white
   h1
-    font-size: 32px
+    font-size: $font-xxxl 
     font-weight: 700
-    margin: 0 0 10px 0
+    margin: 0 0 $space-sm 0
   p
-    font-size: 16px
+    font-size: $font-lg 
     margin: 0
     opacity: 0.9
 
 .searchContainer
   display: flex
-  background: rgba(255, 255, 255, 0.1)
-  border-radius: 6px
+  background: rgba(255, 255, 255, 0.1) 
+  border-radius: $radius-sm 
   overflow: hidden
   width: 100%
   max-width: 450px
@@ -43,7 +43,7 @@
   flex: 1
   background: transparent
   border: none
-  padding: 15px 20px
+  padding: $space-md $space-lg 
   color: $white
   outline: none
   &::placeholder
@@ -53,7 +53,7 @@
   background-color: $yellow-btn
   color: $white
   border: none
-  padding: 0 25px
+  padding: 0 $space-xl 
   font-weight: 600
   cursor: pointer
   transition: background-color 0.2s
@@ -63,23 +63,23 @@
 .mainContainer
   max-width: 1200px
   margin: 0 auto
-  padding: 40px 20px 80px
+  padding: $space-xxl $space-lg $space-80 
 
 .gridSection
-  margin-bottom: 60px
+  margin-bottom: $space-hero 
 
 .sectionHeader
-  margin-bottom: 25px
+  margin-bottom: $space-xl 
   h2
-    font-size: 22px
+    font-size: $font-xl 
     color: $text-dark-blue
-    margin: 0 0 5px 0
+    margin: 0 0 $space-xs 0
   p
-    font-size: 14px
+    font-size: $font-sm 
     color: $text-grey
     margin: 0
 
 .cardsGrid
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
-  gap: 20px
+  gap: $space-lg 

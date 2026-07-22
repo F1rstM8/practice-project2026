@@ -10,9 +10,9 @@ import CONSTANTS from '../../constants';
 
 const RegistrationPage = (props) => {
   
-  useEffect(() => {
-    props.clearError();
-  }, []);
+ useEffect(() => {
+  props.clearError();
+}, [props.clearError]);
 
   return (
     <div className={styles.signUpPage}>

@@ -3,7 +3,7 @@
 .card
   background: $white
   border: 1px solid $card-border
-  border-radius: 8px
+  border-radius: $radius-md // 
   overflow: hidden
   transition: box-shadow 0.2s, transform 0.2s
   cursor: pointer
@@ -11,15 +11,15 @@
   flex-direction: column
   
   &:hover
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08)
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) 
     transform: translateY(-2px)
 
 .logoContainer
-  height: 140px
+  height: 140px 
   display: flex
   justify-content: center
   align-items: center
-  padding: 20px
+  padding: $space-lg 
   
   img
     max-width: 100%
@@ -27,20 +27,20 @@
     object-fit: contain
 
 .infoContainer
-  padding: 15px
+  padding: $space-md 
   text-align: center
   display: flex
   flex-direction: column
   border-top: 1px solid $card-border
 
 .domainName
-  font-size: 15px
+  font-size: $font-base 
   font-weight: 700
   color: $text-dark
-  margin: 0 0 5px 0
+  margin: 0 0 $space-xs 0 
 
 .price
-  font-size: 14px
+  font-size: $font-sm 
   font-weight: 600
   color: $purple-light
   margin: 0
