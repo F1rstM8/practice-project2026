@@ -1,85 +1,186 @@
 @import '../../styles/_variables.sass'
 
 .pageWrapper
-  width: 100%
-  font-family: sans-serif
-  background-color: $white
+  background-color: #f9fafb 
+  min-height: 100vh
+  padding-bottom: $space-xxl
+
 
 .heroSection
-  background: linear-gradient(135deg, $purple-dark 0%, $purple-light 100%)
-  padding: $space-hero $space-lg 
+ 
+  background: linear-gradient(90deg, #2a1052 0%, #4b369d 50%, #5e46c7 100%)
+  padding: $space-xxl $space-lg
+  color: $white
   display: flex
   justify-content: center
 
 .heroContent
-  max-width: 1200px 
+  max-width: 1200px
   width: 100%
   display: flex
   justify-content: space-between
   align-items: center
   flex-wrap: wrap
-  gap: $space-lg 
+  gap: $space-lg
+
+  @media (max-width: 768px)
+    flex-direction: column
+    align-items: stretch
 
 .heroText
-  color: $white
   h1
-    font-size: $font-xxxl 
+    font-size: $font-xxxl
     font-weight: 700
-    margin: 0 0 $space-sm 0
+    margin-bottom: $space-xs
+    display: flex
+    align-items: center
+    gap: 10px
   p
-    font-size: $font-lg 
-    margin: 0
+    font-size: $font-base
     opacity: 0.9
 
 .searchContainer
   display: flex
-  background: rgba(255, 255, 255, 0.1) 
-  border-radius: $radius-sm 
-  overflow: hidden
+  align-items: center
+  background: rgba(255, 255, 255, 0.15)
+  border-radius: $radius-md
+  padding: 4px
   width: 100%
   max-width: 450px
+
+  @media (max-width: 768px)
+    max-width: 100%
 
 .searchInput
   flex: 1
   background: transparent
   border: none
-  padding: $space-md $space-lg 
+  padding: $space-sm $space-md
   color: $white
-  outline: none
+  font-size: $font-sm
+  
   &::placeholder
-    color: rgba(255, 255, 255, 0.6)
+    color: rgba(255, 255, 255, 0.7)
+  &:focus
+    outline: none
 
 .refineBtn
-  background-color: $yellow-btn
+  background-color: $orange
   color: $white
   border: none
-  padding: 0 $space-xl 
-  font-weight: 600
+  padding: 10px $space-xl
+  border-radius: $radius-md
+  font-weight: bold
   cursor: pointer
-  transition: background-color 0.2s
+  transition: background-color 0.3s
+  
   &:hover
-    background-color: $yellow-btn-hover
+    background-color: #e06a43
 
+// === MAIN CONTAINER ===
 .mainContainer
   max-width: 1200px
   margin: 0 auto
-  padding: $space-xxl $space-lg $space-80 
+  padding: 0 $space-lg
 
+// === HISTORY SECTION (Маленькі картки) ===
+.interactedSection
+  margin: $space-lg 0
+
+.interactedHeader
+  display: flex
+  align-items: center
+  gap: 10px
+  font-size: $font-sm
+  color: $text-grey
+  font-weight: 600
+  margin-bottom: $space-md
+
+.interactedGrid
+  display: flex
+  flex-wrap: wrap
+  gap: $space-sm
+
+.interactedCard
+  display: flex
+  align-items: center
+  border: 1px solid $grey-border
+  border-radius: $radius-sm
+  padding: $space-sm $space-md
+  gap: $space-md
+  background: $white
+  min-width: 150px
+  transition: box-shadow 0.2s, transform 0.2s
+  cursor: pointer
+  
+  &:hover
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08)
+    transform: translateY(-2px)
+
+.interactedLogo
+  font-size: 12px
+  font-weight: 700
+  color: $cyan
+  text-transform: uppercase
+
+.interactedInfo
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  gap: 4px
+
+.interactedName
+  font-size: 13px
+  font-weight: 700
+  color: $text-dark
+
+.viewedBadge
+  font-size: 10px
+  background: #eef2fa
+  color: #3b63cc
+  padding: 2px 8px
+  border-radius: 12px
+  font-weight: 600
+
+// === LINE DIVIDER ===
+.divider
+  border: none
+  border-top: 1px solid $grey-border
+  margin: $space-xl 0
+
+// === MAIN GRID SECTION ===
 .gridSection
-  margin-bottom: $space-hero 
+  margin-top: $space-lg
 
 .sectionHeader
-  margin-bottom: $space-xl 
+  margin-bottom: $space-xl
+  
   h2
-    font-size: $font-xl 
-    color: $text-dark-blue
-    margin: 0 0 $space-xs 0
+    font-size: $font-xxl
+    color: $text-dark
+    margin-bottom: $space-xs
+    display: flex
+    align-items: center
+    gap: 10px
   p
-    font-size: $font-sm 
+    font-size: $font-base
     color: $text-grey
-    margin: 0
+
 
 .cardsGrid
   display: grid
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
-  gap: $space-lg 
+  grid-template-columns: repeat(5, 1fr) 
+  gap: 20px
+
+ 
+  @media (max-width: 1100px)
+    grid-template-columns: repeat(4, 1fr)
+  
+  @media (max-width: 900px)
+    grid-template-columns: repeat(3, 1fr)
+  
+  @media (max-width: 650px)
+    grid-template-columns: repeat(2, 1fr)
+    
+  @media (max-width: 450px)
+    grid-template-columns: 1fr
