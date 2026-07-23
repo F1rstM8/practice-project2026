@@ -6,14 +6,12 @@ import FeatureCard from './FeatureCard';
 const AgencyFeatures = () => {
   return (
     <section className={styles.container}>
-      {/* ВОТ ОНИ — ПОТЕРЯННЫЕ ЗАГОЛОВОК И ПАРАГРАФ */}
+    
       <div className={styles.header}>
         <h2>{featuresData.heading}</h2>
         <p>{featuresData.paragraph}</p>
       </div>
-
       <div className={styles.featuresWrapper}>
-        {/* ВАЖНО: теперь обращаемся к массиву features внутри объекта */}
         {featuresData.features.map((feature) => (
           <FeatureCard
             key={feature.id}

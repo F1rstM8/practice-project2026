@@ -5,7 +5,6 @@ import styles from './RecommendedPage.module.sass';
 import DomainCard from '../../components/DomainCard/DomainCard';
 import recommendedData from '../../data/recommended.json';
 
-// Статичні дані для блоку історії (як на макеті)
 const interactedDomains = [
   { id: 1, name: 'Gqil.com', logoText: 'Gqil' },
   { id: 2, name: 'BLLT.com', logoText: 'BLLT' },
@@ -20,7 +19,7 @@ const RecommendedPage = () => {
       
       <main className={styles.pageWrapper}>
         
-        {/* HERO SECTION */}
+  
         <section className={styles.heroSection}>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
@@ -40,7 +39,7 @@ const RecommendedPage = () => {
 
         <div className={styles.mainContainer}>
           
-          {/* HISTORY SECTION (NEW) */}
+         
           <section className={styles.interactedSection}>
             <div className={styles.interactedHeader}>
               <span>📊</span>

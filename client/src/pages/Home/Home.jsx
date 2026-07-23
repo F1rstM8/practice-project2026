@@ -14,13 +14,14 @@ import AgencyFeatures from '../../components/AgencyFeatures/AgencyFeatures';
 const Home = (props) => {
   const [index, setIndex] = useState(0);
   const [styleName, setStyle] = useState(styles.headline__static);
-  let timeout;
+ 
 
-  useEffect(() => {
-    timeout = setInterval(() => {
+ useEffect(() => {
+    const timeout = setInterval(() => {
       setIndex(index + 1);
       setStyle(styles.headline__isloading);
     }, 3000);
+    
     return () => {
       setStyle(styles.headline__static);
       clearInterval(timeout);
@@ -263,7 +264,7 @@ const Home = (props) => {
                   submissfons instantly.
                 </p>
                 <Link to="/startContest">
-                  <i class="fas fa-lightbulb">Start A Contest</i>
+                  <i className="fas fa-lightbulb">Start A Contest</i>
                 </Link>
               </div>
             </div>

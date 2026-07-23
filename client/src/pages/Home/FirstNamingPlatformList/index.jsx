@@ -13,8 +13,8 @@ function FirstNamingPlatformList() {
               <div className={styles.namingPlatformArticle}>
                 <img src={c.iconSrc} alt={c.title} />
                 <h3>
-                  {c.title.map((t) => (
-                    <div>{t}</div>
+                  {c.title.map((t, index) => (
+                    <div key={index}>{t}</div>
                   ))}
                 </h3>
                 <p>{c.body}</p>

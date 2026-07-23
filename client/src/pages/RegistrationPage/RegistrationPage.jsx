@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Logo from '../../components/Logo';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
-import RegistrationFooter from '../../components/RegistrationFooter/RegistrationFooter'; 
+import RegistrationFooter from '../../components/RegistrationFooter/RegistrationFooter';
 import styles from './RegistrationPage.module.sass';
 import { clearAuthError } from '../../store/slices/authSlice';
 import CONSTANTS from '../../constants';
 
 const RegistrationPage = (props) => {
-  
- useEffect(() => {
-  props.clearError();
-}, [props.clearError]);
+  const { clearError, history } = props;
+
+  useEffect(() => {
+    clearError();
+  }, [clearError]);
 
   return (
     <div className={styles.signUpPage}>
@@ -20,21 +21,21 @@ const RegistrationPage = (props) => {
         <div className={styles.headerSignUpPage}>
           <Logo src={`${CONSTANTS.STATIC_IMAGES_PATH}logo.png`} />
           <div className={styles.linkLoginContainer}>
-            <Link to='/login' style={{ textDecoration: 'none' }}>
+            <Link to="/login" style={{ textDecoration: 'none' }}>
               <span>Login</span>
             </Link>
           </div>
         </div>
-        <RegistrationForm history={props.history} />
+
+        <RegistrationForm history={history} />
       </div>
-      
-     
+
       <RegistrationFooter />
     </div>
   );
 };
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   clearError: () => dispatch(clearAuthError()),
 });
 

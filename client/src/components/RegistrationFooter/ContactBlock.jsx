@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './ContactBlock.module.sass';
 
-// Правильный импорт констант, как в RegistrationFooter
 import CONSTANTS from '../../constants';
 const { TEL_NUMBER } = CONSTANTS.COMPANY_CONTACTS;
 

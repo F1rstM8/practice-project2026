@@ -2,10 +2,8 @@ import React from 'react';
 
 import styles from '../../pages/RegistrationPage/RegistrationPage.module.sass';
 import faqData from '../../pages/RegistrationPage/faq.json';
-import CONSTANTS from '../../constants';
-import ContactBlock from './ContactBlock';
 
-const { TEL_NUMBER } = CONSTANTS.COMPANY_CONTACTS;
+import ContactBlock from './ContactBlock';
 
 const RegistrationFooter = () => {
   return (
